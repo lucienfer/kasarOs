@@ -104,7 +104,9 @@ while true; do
             sudo docker stop $(docker ps -aq) > /dev/null 2>&1 || true
             sudo docker rm $(docker ps -aq) > /dev/null 2>&1 || true
         fi
+        sudo mv /root/juno /etc/
         sudo rm -rf /root/*
+        sudo mv /etc/juno /root/
         cd /root/
         git clone https://github.com/KasarLabs/kasarOs && cd kasarOs && git checkout new_snapshot
         if ! cmp -s "/root/kasarOs/rc.local" "/etc/rc.local"; then

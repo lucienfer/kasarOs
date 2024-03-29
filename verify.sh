@@ -69,7 +69,7 @@ while true; do
         fi
         sudo rm -rf /root/kasarOs
         if [ -d "/root/juno" ]; then
-            rm -rf /root/juno
+            echo -e "rm -rf /root/juno"
         fi
         if [ -d "/root/pathfinder" ]; then
             rm -rf /root/pathfinder

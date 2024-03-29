@@ -108,7 +108,7 @@ while true; do
         sudo rm -rf /root/*
         sudo mv /etc/juno /root/
         cd /root/
-        git clone https://github.com/KasarLabs/kasarOs && cd kasarOs && git checkout new_snapshot
+        git clone https://github.com/lucienfer/KasarLabs/kasarOs && cd kasarOs && git checkout new_snapshot
         if ! cmp -s "/root/kasarOs/rc.local" "/etc/rc.local"; then
             cp "/root/kasarOs/rc.local" "/etc/rc.local"
         fi
